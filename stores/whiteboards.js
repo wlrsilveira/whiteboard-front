@@ -80,18 +80,19 @@ export const useWhiteboardStore = defineStore("whiteboardStore", {
       }
     },
 
-    /*async signInWithIdentifier(identifier) {
+    async signInWithIdentifier(identifier) {
       this.isLoading = true;
       this.error = null;
       try {
-        const response = await axios.get(`/whiteboards/${identifier}/signIn`);
-        return response.data;
+        const { $api } = useNuxtApp();
+        const response = await $api.get(`/whiteboards/${identifier}`);
+        this.currentWhiteboard = response.data.data;
       } catch (error) {
         this.error = error.response?.data?.message || "Error signing in.";
         throw error;
       } finally {
         this.isLoading = false;
       }
-    },*/
+    },
   },
 });
