@@ -50,45 +50,45 @@ const logout = async () => {
 
         <nav class="hidden md:flex items-center space-x-4">
             <router-link 
-            to="/whiteboards" 
-            class="text-gray-600 hover:text-orange-600 font-medium"
+                to="/whiteboards" 
+                class="text-gray-600 hover:text-orange-600 font-medium"
             >
-            Whiteboards
+                Whiteboards
             </router-link>
 
             <div class="relative">
-            <button 
-                class="text-gray-700 font-medium focus:outline-none" 
-                @click="dropdownOpen = !dropdownOpen"
-            >
-                {{ authStore.user?.name || 'User' }}
-                <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke-width="2" 
-                stroke="currentColor" 
-                class="w-4 h-4 inline ml-1"
-                >
-                <path 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round" 
-                    d="M19 9l-7 7-7-7" 
-                />
-                </svg>
-            </button>
-
-            <div 
-                v-if="dropdownOpen" 
-                class="absolute right-0 mt-2 bg-white shadow-md rounded-md w-48 z-50"
-            >
                 <button 
-                @click="logout" 
-                class="block w-full text-left px-4 py-2 text-gray-600 hover:bg-orange-100"
+                    class="text-gray-700 font-medium focus:outline-none" 
+                    @click="dropdownOpen = !dropdownOpen"
                 >
-                Logout
+                    {{ authStore.user?.name || 'User' }}
+                    <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke-width="2" 
+                        stroke="currentColor" 
+                        class="w-4 h-4 inline ml-1"
+                    >
+                    <path 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        d="M19 9l-7 7-7-7" 
+                    />
+                    </svg>
                 </button>
-            </div>
+
+                <div 
+                    v-if="dropdownOpen" 
+                    class="absolute right-0 mt-2 bg-white shadow-md rounded-md w-48 z-50"
+                >
+                    <button 
+                        @click="logout" 
+                        class="block w-full text-left px-4 py-2 text-gray-600 hover:bg-orange-100"
+                    >
+                        Logout
+                    </button>
+                </div>
             </div>
         </nav>
         </div>
