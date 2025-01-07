@@ -117,7 +117,13 @@ export default {
                                 @click="deleteWhiteboard(whiteboard.id)"
                             >
                                 Delete
-                            </button>                            
+                            </button>       
+                            <button
+                                class="px-3 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 ml-2"
+                                @click="navigateTo('/whiteboards/signIn/' + whiteboard.id)"
+                            >
+                                Draw
+                            </button>  
                         </td>
                     </tr>
                 </tbody>

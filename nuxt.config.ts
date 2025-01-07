@@ -14,7 +14,9 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
   runtimeConfig: {
     public: {
-      apiBase: 'http://127.0.0.1:8000/api',
+      apiBase: process.env.NUXT_API_URL,
+      pusherAppKey: process.env.NUXT_PUSHER_APP_KEY,
+      pusherCluster: process.env.NUXT_PUSHER_CLUSTER,
     },
   },
 })

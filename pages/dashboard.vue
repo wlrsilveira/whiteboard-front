@@ -15,7 +15,6 @@ onMounted(() => {
 
 const cards = ref([
   { id: 1, title: 'My Whiteboards', count: authStore?.user?.whiteboards?.length },
-  { id: 2, title: 'Whiteboards that I collaborate with', count: 1 },
 ])
 </script>
 <template>
